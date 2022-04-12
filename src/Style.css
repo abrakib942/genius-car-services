@@ -1,0 +1,60 @@
+/* All components styles */
+
+/* Services */
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+.services-title {
+  text-align: center;
+  color: tomato;
+}
+
+/* service  */
+.service {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.service img {
+  width: 100%;
+}
+.service h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+/* make responsive */
+
+/* services and service */
+@media (max-width: 576px) {
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service {
+    width: 75%;
+    margin: auto;
+  }
+  .service img {
+    width: 100%;
+  }
+  .service h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service img {
+    width: 100%;
+  }
+  .service h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
