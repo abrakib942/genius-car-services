@@ -9,6 +9,8 @@ import Services from "./Pages/Home/Services/Services";
 import Experts from "./Pages/Home/experts/Experts";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/register/Register";
+import Checkout from "./Pages/checkout/Checkout";
+import RequiredAuth from "./Pages/Login/requiredAuth/RequiredAuth";
 
 function App() {
   return (
@@ -23,6 +25,14 @@ function App() {
         <Route path="/experts" element={<Experts />}></Route> */}
         <Route path="/about" element={<About />}></Route>
         <Route path="/service/:serviceId" element={<ServiceDetail />}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequiredAuth>
+              <Checkout />
+            </RequiredAuth>
+          }
+        ></Route>
       </Routes>
       <Footer />
     </div>
