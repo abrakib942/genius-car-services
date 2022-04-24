@@ -10,6 +10,7 @@ import SocialLogin from "../Shared/socialLogin/SocialLogin";
 import { sendEmailVerification } from "firebase/auth";
 import { async } from "@firebase/util";
 import Loading from "../loading/Loading";
+import PageTitle from "../Shared/pageTitle/PageTitle";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -53,6 +54,8 @@ const Register = () => {
 
   return (
     <div className="container">
+      <PageTitle title="Register"></PageTitle>
+
       <h2 className="text-center text-primary my-4">Register</h2>
       <form onSubmit={handleRegister} className="register-form">
         <input type="text" name="text" placeholder="Your Name" id="" />
